@@ -1,0 +1,102 @@
+ header {
+        background-color: #8D9EE0; 
+        color: #000000;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+ }
+
+main {
+                background-color: #ffffff;
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            section {
+                max-width: 800px;
+                margin: 20px auto;
+                background-color: transparent;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .titulo-secao {
+                color: #8D9EE0;
+            }
+
+            ul {
+                list-style-type: none; 
+                padding: 0;
+                text-align: left;
+            }
+
+            .botoes-container {
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+
+            .voto-check {
+                display: none;
+            }
+
+            .btn-voto {
+                background-color: #f0f0f0;
+                color: black;
+                border: 1px solid #ccc;
+                padding: 4px 10px;
+                margin: 0;
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                user-select: none;
+            }
+
+            .btn-voto span {
+                font-size: 16px;
+            }
+
+            .btn-voto:hover {
+                background-color: #e0e0e0;
+                border-color: #bbb;
+            }
+
+            .voto-check:not(:checked) + .btn-voto .contador::before {
+                content: "0";
+            }
+
+            .voto-check:checked + .btn-voto .contador::before {
+                content: "1";
+            }
+
+            .voto-check:checked + .btn-voto {
+                background-color: #add8e6;
+                border-color: #70b0cc;
+            }
+
+            footer {
+                background-color: #8D9EE0;
+                text-align: center;
+                padding: 10px;
+                max-width: 800px;
+                margin: 20px auto;
+            }
