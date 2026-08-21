@@ -4,7 +4,110 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Basquete pra vida</title>
-        <link rel="stylesheet" href="style.css">
+        <style>
+            header {
+                background-color: #8D9EE0; 
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            main {
+                background-color: #ffffff;
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            section {
+                max-width: 800px;
+                margin: 20px auto;
+                background-color: transparent;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .titulo-secao {
+                color: #8D9EE0;
+            }
+
+            ul {
+                list-style-type: none; 
+                padding: 0;
+                text-align: left;
+            }
+
+            .botoes-container {
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+
+            .voto-check {
+                display: none;
+            }
+
+            .btn-voto {
+                background-color: #f0f0f0;
+                color: black;
+                border: 1px solid #ccc;
+                padding: 4px 10px;
+                margin: 0;
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                user-select: none;
+            }
+
+            .btn-voto span {
+                font-size: 16px;
+            }
+
+            .btn-voto:hover {
+                background-color: #e0e0e0;
+                border-color: #bbb;
+            }
+
+            .voto-check:not(:checked) + .btn-voto .contador::before {
+                content: "0";
+            }
+
+            .voto-check:checked + .btn-voto .contador::before {
+                content: "1";
+            }
+
+            .voto-check:checked + .btn-voto {
+                background-color: #add8e6;
+                border-color: #70b0cc;
+            }
+
+            footer {
+                background-color: #8D9EE0;
+                text-align: center;
+                padding: 10px;
+                max-width: 800px;
+                margin: 20px auto;
+            }
+        </style>
     </head>
 
     <body>
@@ -23,7 +126,7 @@
             </div>
         </main>
 
-        <article>
+        <section>
             <h2 class="titulo-secao">História do Basquete</h2>
             <p>O basquetebol foi criado em 1891 pelo professor de educação física canadense James Naismith, na Associação Cristã de Moços de Springfield, Massachusetts, EUA. Ele precisava de um jogo que os alunos pudessem jogar em local fechado durante o inverno rigoroso.</p>
             
@@ -34,9 +137,9 @@
                 <input type="checkbox" id="deslike-historia" class="voto-check">
                 <label for="deslike-historia" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
-        <article>
+        </section>
 
-        <article>
+        <section>
             <h2 class="titulo-secao">Regras Básicas</h2>
             <ul>
                 <li>O jogo é disputado entre duas equipes de 5 jogadores cada.</li>
@@ -52,8 +155,9 @@
                 <input type="checkbox" id="deslike-regras" class="voto-check">
                 <label for="deslike-regras" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
-        <article>
-        <article>
+        </section>
+
+        <section>
             <h2 class="titulo-secao">Principais Posições</h2>
             <p>Em uma equipe tradicional temos: <b>Armador</b> (organiza o jogo), <b>Alas</b> (jogam pelas laterais) e <b>Pivô</b> (joga perto da cesta e pega os rebotes).</p>
             
@@ -64,7 +168,7 @@
                 <input type="checkbox" id="deslike-posicoes" class="voto-check">
                 <label for="deslike-posicoes" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
-        <article>
+        </section>
 
         <footer>
             
