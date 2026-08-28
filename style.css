@@ -1,13 +1,33 @@
+
+:root {
+    --fundo-site: #f9f9f9;       
+    --fundo-cartao: #ffffff;     
+    --texto-principal: #000000;   
+    --cor-primaria: #183C63;      
+    --texto-cabecalho: #ffffff;   
+}
+
+.tema-escuro {
+    --fundo-site: #0b111e;       
+    --fundo-cartao: #183C63;     
+    --texto-principal: #ffffff;  
+    --cor-primaria: #ffffff;     
+    --texto-cabecalho: #183C63;  
+}
+
+
 header {
-    background-color: #183C63; 
-    color: #ffffff;            
+    background-color: var(--cor-primaria); 
+    color: var(--texto-cabecalho);         
     text-align: center;
-    max-width: 1000px;        
+    max-width: 1000px;
     margin: 0 auto;
     padding: 30px 20px;
     font-weight: bold; 
     font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 main {
@@ -35,19 +55,22 @@ section {
 
 
 article {
-    background-color: #ffffff; 
+    background-color: var(--fundo-cartao); 
+    color: var(--texto-principal);        
+    border: 1px solid var(--cor-primaria); 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-between; 
-    border: 1px solid #e0e0e0;     
     border-radius: 4px;            
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
     margin: 0;                     
     padding: 24px;                 
+    gap: 16px;
     flex: 1 1 280px;               
     max-width: 320px;              
+    transition: background-color 0.3s, color 0.3s;
 }
 
 img {
@@ -123,66 +146,63 @@ footer {
 }
 
 :root {
-    --cor-primaria: #183C63; /* Azul escuro do botão e cabeçalho */
+    --cor-primaria: #183C63; 
     --fundo-site: #f9f9f9;
     --fundo-cartao: #ffffff;
     --texto-principal: #000000;
 }
 
-/* Cores que mudam quando o tema escuro está ativo */
+
 .tema-escuro {
     --fundo-site: #121824;
     --fundo-cartao: #1e2640;
     --texto-principal: #ffffff;
 }
 
-/* Aplicando as variáveis dinâmicas ao corpo do site */
+
 body {
-    background-color: var(--fundo-site);
-    color: var(--texto-principal);
-    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--fundo-site); 
+    color: var(--texto-principal);      
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 
-/* =======================================================
-   O BOTÃO DO TEMA (BASEADO NO SEU CÓDIGO + DESIGN DA FOTO)
-   ======================================================= */
+
 .btn-tema-escuro {
     position: fixed;
     bottom: 16px; 
     right: 16px;  
-    width: 60px;       /* Tamanho fixo para garantir um círculo perfeito */
+    width: 60px;    
     height: 60px;      
     background-color: var(--cor-primaria); 
     border-radius: 50%; 
-    border: 2px solid #0b1a2e; /* Borda externa escura fina igual à imagem */
+    border: 2px solid #0b1a2e; 
     cursor: pointer; 
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, background-color 0.3s;
-    z-index: 9999;     /* Garante que fique acima de tudo no site */
+    z-index: 9999;     
 }
 
-/* Cria a esfera bicolor interna (Metade Roxa / Metade Amarela) */
+
 .btn-tema-escuro::after {
     content: "";
     width: 28px;
     height: 28px;
-    border-radius: 50%;
-    /* Gradiente linear perfeito cortado em 90 graus */
+    border-radius: 50%;;
     background: linear-gradient(90deg, #5b3e85 50%, #fcd675 50%);
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4); /* Sombra interna para dar volume de esfera */
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4);
     transition: transform 0.4s ease;
 }
 
-/* Efeito sutil ao passar o mouse */
+
 .btn-tema-escuro:hover {
     transform: scale(1.05);
 }
 
-/* Quando o tema escuro estiver ativo, a esfera interna gira de lado */
+
 .tema-escuro .btn-tema-escuro::after {
     transform: rotate(180deg);
 }
