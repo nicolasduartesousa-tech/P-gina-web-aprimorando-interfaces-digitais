@@ -186,23 +186,14 @@ body {
     z-index: 9999;     
 }
 
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 32px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 35%;
 
-.btn-tema-escuro::after {
-    content: "";
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;;
-    background: linear-gradient(90deg, #5b3e85 50%, #fcd675 50%);
-    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease;
-}
-
-
-.btn-tema-escuro:hover {
-    transform: scale(1.05);
-}
-
-
-.tema-escuro .btn-tema-escuro::after {
-    transform: rotate(180deg);
+     
 }
