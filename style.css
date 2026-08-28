@@ -1,44 +1,55 @@
 header {
-    background-color: #183C63; 
-    color: #ffffff;            
+    background-color: #183C63; /* Azul escuro do novo cabeçalho */
+    color: #ffffff;            /* Texto branco para contraste */
     text-align: center;
-    max-width: 1000px;         
+    max-width: 1000px;         /* Aumentado para cobrir a largura dos 3 blocos */
     margin: 0 auto;
-    padding: 30px 20px;        
+    padding: 30px 20px;
+    font-weight: bold; 
+    font-size: 18px;
 }
 
-
-
+/* O CONTAINER PRINCIPAL (MAIN) */
 main {
     background-color: #f9f9f9; 
     min-height: auto;
-    max-width: 1000px;         
-    margin: 0 auto;            
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;       
-    flex-wrap: wrap;           
-    align-items: stretch;      
-    justify-content: center;   
-    gap: 20px;                
-    padding: 30px 0;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-
-
+/* O WRAPPER DOS POSTS (SECTION) */
+/* Mudamos para flex-row para colocar os posts lado a lado */
 section {
-    background-color: #ffffff;
-    max-width: 300px;          
     width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-    padding: 24px;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;     
-    justify-content: space-between; 
-    gap: 16px;              
+    flex-direction: row;       /* Alinha os blocos lado a lado */
+    flex-wrap: wrap;           /* Permite quebra de linha em telas pequenas */
+    justify-content: center;   /* Centraliza as colunas */
+    align-items: stretch;      /* Faz todos os blocos terem a mesma altura */
+    gap: 16px;                 /* Mantém o espaçamento limpo entre os cartões */
+    padding: 10px;
+}
+
+/* OS CARTÕES INDIVIDUAIS (ARTICLE) */
+article {
+    background-color: #ffffff; /* Fundo branco interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between; /* Garante que os botões fiquem alinhados na base */
+    border: 1px solid #e0e0e0;     /* Borda suave idêntica à imagem */
+    border-radius: 4px;            /* Cantos levemente arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave para o efeito de cartão */
+    margin: 0;                     /* Zerado para o gap da section controlar o espaço */
+    padding: 24px;                 /* Ajustado para melhor aproveitamento interno */
+    gap: 16px;
+    flex: 1 1 280px;               /* Define uma largura base inteligente para 3 colunas */
+    max-width: 320px;              /* Impede que o bloco estique demais */
 }
 
 img {
@@ -50,7 +61,7 @@ img {
 
 .titulo-secao {
     color: #183C63; 
-    font-size: 20px;           
+    font-size: 20px;
     font-weight: bold;
     line-height: 1.3;
     margin: 0;
@@ -58,13 +69,13 @@ img {
 
 .autor {
     font-size: 13px;
-    color: #555555;            
+    color: #555555;
     font-weight: bold;
     margin-bottom: 4px;
 }
 
 .texto-conteudo {
-    font-size: 13px;           
+    font-size: 13px;
     color: #333333;
     line-height: 1.5;
     margin: 0;
@@ -72,7 +83,7 @@ img {
 
 .fonte-link {
     font-size: 13px;
-    color: #333333;            
+    color: #333333;
     text-decoration: underline;
 }
 
@@ -80,7 +91,7 @@ img {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: auto;          
+    margin-top: auto;          /* Força as reações a ficarem sempre presas no rodapé do bloco */
 }
 
 .voto-check {
