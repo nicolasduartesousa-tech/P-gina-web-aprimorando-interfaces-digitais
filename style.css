@@ -1,15 +1,15 @@
 header {
-    background-color: #183C63; /* Azul escuro do novo cabeçalho */
-    color: #ffffff;            /* Texto branco para contraste */
+    background-color: #183C63; 
+    color: #ffffff;            
     text-align: center;
-    max-width: 1000px;         /* Aumentado para cobrir a largura dos 3 blocos */
+    max-width: 1000px;        
     margin: 0 auto;
     padding: 30px 20px;
     font-weight: bold; 
     font-size: 18px;
 }
 
-/* O CONTAINER PRINCIPAL (MAIN) */
+
 main {
     background-color: #f9f9f9; 
     min-height: auto;
@@ -21,35 +21,33 @@ main {
     padding: 20px 0;
 }
 
-/* O WRAPPER DOS POSTS (SECTION) */
-/* Mudamos para flex-row para colocar os posts lado a lado */
+
 section {
     width: 100%;
     display: flex;
-    flex-direction: row;       /* Alinha os blocos lado a lado */
-    flex-wrap: wrap;           /* Permite quebra de linha em telas pequenas */
-    justify-content: center;   /* Centraliza as colunas */
-    align-items: stretch;      /* Faz todos os blocos terem a mesma altura */
-    gap: 16px;                 /* Mantém o espaçamento limpo entre os cartões */
+    flex-direction: row;       
+    flex-wrap: wrap;           
+    justify-content: center;   
+    align-items: stretch;      
+    gap: 16px;                 
     padding: 10px;
 }
 
-/* OS CARTÕES INDIVIDUAIS (ARTICLE) */
+
 article {
-    background-color: #ffffff; /* Fundo branco interno */
+    background-color: #ffffff; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-between; /* Garante que os botões fiquem alinhados na base */
-    border: 1px solid #e0e0e0;     /* Borda suave idêntica à imagem */
-    border-radius: 4px;            /* Cantos levemente arredondados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave para o efeito de cartão */
-    margin: 0;                     /* Zerado para o gap da section controlar o espaço */
-    padding: 24px;                 /* Ajustado para melhor aproveitamento interno */
-    gap: 16px;
-    flex: 1 1 280px;               /* Define uma largura base inteligente para 3 colunas */
-    max-width: 320px;              /* Impede que o bloco estique demais */
+    justify-content: space-between; 
+    border: 1px solid #e0e0e0;     
+    border-radius: 4px;            
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    margin: 0;                     
+    padding: 24px;                 
+    flex: 1 1 280px;               
+    max-width: 320px;              
 }
 
 img {
@@ -91,7 +89,7 @@ img {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: auto;          /* Força as reações a ficarem sempre presas no rodapé do bloco */
+    margin-top: auto;          
 }
 
 .voto-check {
