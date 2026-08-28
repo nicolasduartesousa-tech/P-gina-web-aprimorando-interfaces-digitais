@@ -121,3 +121,68 @@ footer {
     max-width: 1000px;
     margin: 20px auto;
 }
+
+:root {
+    --cor-primaria: #183C63; /* Azul escuro do botão e cabeçalho */
+    --fundo-site: #f9f9f9;
+    --fundo-cartao: #ffffff;
+    --texto-principal: #000000;
+}
+
+/* Cores que mudam quando o tema escuro está ativo */
+.tema-escuro {
+    --fundo-site: #121824;
+    --fundo-cartao: #1e2640;
+    --texto-principal: #ffffff;
+}
+
+/* Aplicando as variáveis dinâmicas ao corpo do site */
+body {
+    background-color: var(--fundo-site);
+    color: var(--texto-principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* =======================================================
+   O BOTÃO DO TEMA (BASEADO NO SEU CÓDIGO + DESIGN DA FOTO)
+   ======================================================= */
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px; 
+    right: 16px;  
+    width: 60px;       /* Tamanho fixo para garantir um círculo perfeito */
+    height: 60px;      
+    background-color: var(--cor-primaria); 
+    border-radius: 50%; 
+    border: 2px solid #0b1a2e; /* Borda externa escura fina igual à imagem */
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
+    z-index: 9999;     /* Garante que fique acima de tudo no site */
+}
+
+/* Cria a esfera bicolor interna (Metade Roxa / Metade Amarela) */
+.btn-tema-escuro::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    /* Gradiente linear perfeito cortado em 90 graus */
+    background: linear-gradient(90deg, #5b3e85 50%, #fcd675 50%);
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4); /* Sombra interna para dar volume de esfera */
+    transition: transform 0.4s ease;
+}
+
+/* Efeito sutil ao passar o mouse */
+.btn-tema-escuro:hover {
+    transform: scale(1.05);
+}
+
+/* Quando o tema escuro estiver ativo, a esfera interna gira de lado */
+.tema-escuro .btn-tema-escuro::after {
+    transform: rotate(180deg);
+}
