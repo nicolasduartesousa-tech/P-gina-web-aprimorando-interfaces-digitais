@@ -1,51 +1,112 @@
+               header {
+                background-color: #8D9EE0; 
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 10px;
 
-.voto-check {
-    display: none !important;
-}
 
+            }
 
-.botoes-container {
+            main {
+                background-color: #ffffff;
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 0;
+
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            section {
+              article {
     display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: auto;
-    padding-top: 10px;
-}
-
-
-.btn-voto {
-    background-color: #f0f0f0;
-    color: black;
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    margin: 0;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex; 
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
-    user-select: none;
-    transition: background-color 0.2s;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #183C63;
+    margin: 16px;
+    gap: 16px;
+    padding: 16px;
+    flex: 1 1 25%;
 }
+            }
+
+            .titulo-secao {
+                color: #8D9EE0;
+            }
+
+            ul {
+                list-style-type: none; 
+                padding: 0;
+                text-align: left;
+            }
+
+            .botoes-container {
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                margin-top: 10px;
+            }
 
 
-.btn-voto:hover {
-    background-color: #e0e0e0;
-    border-color: #bbb;
-}
+            .voto-check {
+                display: none;
+            }
 
+            .btn-voto {
+                background-color: #f0f0f0;
+                color: black;
+                border: 1px solid #ccc;
+                padding: 4px 10px;
+                margin: 0;
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                user-select: none;
+            }
 
-.voto-check:not(:checked) + .btn-voto .contador::before {
-    content: "0";
-}
+            .btn-voto span {
+                font-size: 16px;
+            }
 
-.voto-check:checked + .btn-voto .contador::before {
-    content: "1";
-}
+            .btn-voto:hover {
+                background-color: #e0e0e0;
+                border-color: #bbb;
+            }
 
-.voto-check:checked + .btn-voto {
-    background-color: #add8e6;
-    border-color: #70b0cc;
-}
+            .voto-check:not(:checked) + .btn-voto .contador::before {
+                content: "0";
+            }
+
+            .voto-check:checked + .btn-voto .contador::before {
+                content: "1";
+            }
+
+            .voto-check:checked + .btn-voto {
+                background-color: #add8e6;
+                border-color: #70b0cc;
+            }
+
+            footer {
+                background-color: #8D9EE0;
+                text-align: center;
+                padding: 10px;
+                max-width: 800px;
+                margin: 20px auto;
+            }
