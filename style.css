@@ -1,11 +1,23 @@
+
+.linha-divisoria {
+    border: none;
+    border-top: 2px solid #183C63; 
+    width: 85%;                  
+    margin: 24px auto;    
+}        
+
+
 header {
     background-color: #8D9EE0;
     color: #000000;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
+    font-weight: bold; 
+    font-size: 18px;
 }
+
 
 
 main {
