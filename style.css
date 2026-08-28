@@ -1,21 +1,4 @@
 
-:root {
-    --fundo-site: #f9f9f9;       
-    --fundo-cartao: #ffffff;     
-    --texto-principal: #000000;   
-    --cor-primaria: #183C63;      
-    --texto-cabecalho: #ffffff;   
-}
-
-.tema-escuro {
-    --fundo-site: #0b111e;       
-    --fundo-cartao: #183C63;     
-    --texto-principal: #ffffff;  
-    --cor-primaria: #ffffff;     
-    --texto-cabecalho: #183C63;  
-}
-
-
 header {
     background-color: var(--cor-primaria); 
     color: var(--texto-cabecalho);         
