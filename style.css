@@ -171,9 +171,9 @@ body {
     bottom: 16px;
     right: 16px;
     font-size: 32px;
-    padding: 12px;
-    background-color: var(--cor-primaria);
-    border-radius: 35%;
-
-     
+    padding: 12px;   
+    background-color: var(--cor-primaria); 
+    border-radius: 50%; 
+    border: none; 
+    cursor: pointer; 
 }
