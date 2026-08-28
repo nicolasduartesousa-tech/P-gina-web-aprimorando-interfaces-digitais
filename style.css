@@ -1,63 +1,51 @@
-           
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
+
+.voto-check {
+    display: none !important;
 }
 
-
-.conteiner-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
-    flex-wrap: wrap; 
-}
-
-
-.card {
-    background-color: #ffffff;
-    border: 1px solid #cccccc; 
-    padding: 30px 20px;
-    flex: 1 1 280px;
-    max-width: 320px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02); 
-}
-
-
-.card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
-    object-fit: contain;
-}
-
-.card h2 {
-    font-size: 1.3rem;
-    color: #183C63; 
-    margin-bottom: 10px;
-}
-
-.card .autor {
-    font-size: 0.85rem;
-    color: #666666;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.card .texto {
-    font-size: 0.95rem;
-    color: #333333;
-    line-height: 1.5;
-    margin-bottom: auto; 
-    padding-bottom: 20px;
-}
 
 .botoes-container {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     justify-content: center;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+
+.btn-voto {
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+
+.btn-voto:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+
+.voto-check:not(:checked) + .btn-voto .contador::before {
+    content: "0";
+}
+
+.voto-check:checked + .btn-voto .contador::before {
+    content: "1";
+}
+
+.voto-check:checked + .btn-voto {
+    background-color: #add8e6;
+    border-color: #70b0cc;
 }
