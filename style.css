@@ -128,35 +128,36 @@ footer {
     margin: 20px auto;
 }
 
+
 :root {
-    --cor-primaria: #183C63; 
-    --fundo-site: #f9f9f9;
-    --fundo-cartao: #ffffff;
-    --texto-principal: #000000;
+  --fundo-site: #ffffff;
+  --texto-principal: #000000;
+  --cor-primaria: #007bff; 
 }
 
 
 .tema-escuro {
-    --fundo-site: #121824;
-    --fundo-cartao: #1e2640;
-    --texto-principal: #ffffff;
+  --fundo-site: #121824;
+  --fundo-cartao: #1e2640;
+  --texto-principal: #ffffff;
 }
 
 
 body {
-    background-color: var(--fundo-site); 
-    color: var(--texto-principal);      
-    transition: background-color 0.3s, color 0.3s; 
+  background-color: var(--fundo-site);
+  color: var(--texto-principal);
+  transition: background-color 0.3s, color 0.3s;
 }
-;
+
+
 .btn-tema-escuro {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    font-size: 32px;
-    padding: 12px;   
-    background-color: var(--cor-primaria); 
-    border-radius: 50%; 
-    border: none; 
-    cursor: pointer; 
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  font-size: 32px;
+  padding: 12px;
+  background-color: var(--cor-primaria);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
