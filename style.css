@@ -162,3 +162,10 @@ body {
   border: none;
   cursor: pointer;
 }
+.card {
+  background-color: #f4f4f4; 
+  transition: background-color 0.3s;
+}
+.tema-escuro .card {
+  background-color: var(--fundo-cartao); 
+}
